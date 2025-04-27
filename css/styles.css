@@ -1,0 +1,133 @@
+/* Custom styles for Financia Banking Application */
+
+/* Global styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    min-height: 100vh;
+}
+
+/* Navigation bar */
+nav {
+    background: linear-gradient(to right, #1e3a8a, #3b82f6);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+nav a {
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Containers and cards */
+.container {
+    max-width: 1200px;
+}
+
+.bg-white {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.bg-white:hover {
+    transform: translateY(-2px);
+}
+
+/* Buttons */
+button, a.bg-blue-600, a.bg-red-600 {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+}
+
+button:hover, a.bg-blue-600:hover, a.bg-red-600:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Forms */
+input, select {
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    padding: 10px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Tables */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+th {
+    background: #f3f4f6;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+tr:hover {
+    background: #e5e7eb;
+}
+
+/* Custom toast notification */
+#toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #10b981;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#toast.show {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .container {
+        padding: 12px;
+    }
+
+    .bg-white {
+        padding: 16px;
+    }
+
+    button, a.bg-blue-600, a.bg-red-600 {
+        width: 100%;
+        text-align: center;
+    }
+}
